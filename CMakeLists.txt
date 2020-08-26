@@ -17,5 +17,5 @@ add_library(imgui::fonts ALIAS fonts)
 target_include_directories(fonts PUBLIC "include/")
 target_sources(fonts PRIVATE ${SOURCES})
 
-include(iconfontcppheaders)
+include(IconFontCppHeaders)
 target_link_libraries(fonts PUBLIC juliettef::IconFontCppHeaders)

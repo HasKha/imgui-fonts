@@ -14,4 +14,5 @@ FetchContent_MakeAvailable(IconFontCppHeaders)
 
 add_library(IconFontCppHeaders INTERFACE)
 add_library(juliettef::IconFontCppHeaders ALIAS IconFontCppHeaders)
-target_include_directories(IconFontCppHeaders INTERFACE ${IconFontCppHeaders_SOURCE_DIR})
+
+target_include_directories(IconFontCppHeaders INTERFACE ${iconfontcppheaders_SOURCE_DIR})
