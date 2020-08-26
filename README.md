@@ -14,7 +14,7 @@ The MIT license applies to all other files
 - FontAwesome5: https://github.com/FortAwesome/Font-Awesome
 
 ## Usage
-```
+```Cpp
 #include <fonts/source_sans_pro_regular.h>
 #include <fonts/fontawesome5.h>
 #include <IconsFontAwesome5.h>
