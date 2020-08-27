@@ -1,7 +1,7 @@
 #include <fonts/fontawesome5.h>
 
-extern const unsigned int fontawesome5_compressed_size = 144481;
-extern const unsigned int fontawesome5_compressed_data[144484 / 4] = {
+const unsigned int fontawesome5_compressed_size = 144481;
+const unsigned int fontawesome5_compressed_data[144484 / 4] = {
     0x0000bc57, 0x00000000, 0xcc1c0300, 0x00000400, 0x00010037, 0x000d0000, 0x00030080, 0x54464650, 0xcb54914d, 0x1c030024, 0x281582b0, 0x4544471c, 
     0x032a0046, 0x200f82f0, 0x2c0f8290, 0x2f534f1e, 0x56873332, 0x01000060, 0x2b0f8258, 0x616d6360, 0x03750870, 0x110000cd, 0x0c271382, 0x736167c6, 
     0x82ffff70, 0x1c032249, 0x371f8288, 0x796c6708, 0xea238e66, 0x2d000042, 0xb80200d4, 0x61656870, 0x50541964, 0x00212b82, 0x211f82dc, 0x10826836, 

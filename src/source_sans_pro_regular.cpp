@@ -1,7 +1,7 @@
 #include <fonts/source_sans_pro_regular.h>
 
-extern const unsigned int source_sans_pro_regular_compressed_size = 175088;
-extern const unsigned int source_sans_pro_regular_compressed_data[175088/4] =
+const unsigned int source_sans_pro_regular_compressed_size = 175088;
+const unsigned int source_sans_pro_regular_compressed_data[175088/4] =
 {
     0x0000bc57, 0x00000000, 0x6c6d0400, 0x00000400, 0x00010037, 0x000f0000, 0x00030080, 0x53414270, 0x5d1e6545, 0x7b0200bd, 0x24158254, 0x49534446, 
     0x24078247, 0x6d040001, 0x28078264, 0x45444708, 0xdcdfd646, 0x081f8219, 0x00009c30, 0x50477004, 0x7a91534f, 0x02001b4e, 0x01000c80, 0x5347ba6b, 

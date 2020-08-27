@@ -9,7 +9,7 @@ if(CMAKE_SOURCE_DIR STREQUAL PROJECT_SOURCE_DIR)
     include(imgui)
 endif()
 
-file(GLOB SOURCES "include/fonts/*.h" "src/*.c")
+file(GLOB SOURCES "include/fonts/*.h" "src/*.cpp")
 
 add_library(fonts)
 add_library(imgui::fonts ALIAS fonts)
