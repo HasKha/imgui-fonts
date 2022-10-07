@@ -8,7 +8,7 @@ include(FetchContent)
 FetchContent_Declare(
     IconFontCppHeaders
     GIT_REPOSITORY https://github.com/juliettef/IconFontCppHeaders.git
-    GIT_TAG 8cac2b5d9cfc566d3fa90bf6820a95e3c5ed5478
+    GIT_TAG 685673dea6fb4012bd2104bf9b8d8da802eade50
     )
 FetchContent_MakeAvailable(IconFontCppHeaders)
 
