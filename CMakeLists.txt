@@ -13,16 +13,19 @@ include(IconFontCppHeaders)
 # Then link to the font you want, e.g. `target_link_libraries(myapp PUBLIC fonts::fontawesome5)`
 #
 
+# save current path for later
+set_property(GLOBAL PROPERTY __fonts_source_dir ${PROJECT_SOURCE_DIR})
+
 function(fonts_add_font FONT_NAME)
     add_library(fonts_${FONT_NAME})
     add_library(fonts::${FONT_NAME} ALIAS fonts_${FONT_NAME})
 
-    # need full paths here to work in a function
+    get_property(SOURCE_DIR GLOBAL PROPERTY __fonts_source_dir)
     target_include_directories(fonts_${FONT_NAME} PUBLIC 
-        "${PROJECT_SOURCE_DIR}/include/")
+        "${SOURCE_DIR}/include/")
     target_sources(fonts_${FONT_NAME} PRIVATE 
-        "${PROJECT_SOURCE_DIR}/include/fonts/${FONT_NAME}.h" 
-        "${PROJECT_SOURCE_DIR}/src/${FONT_NAME}.cpp")
+        "${SOURCE_DIR}/include/fonts/${FONT_NAME}.h" 
+        "${SOURCE_DIR}/src/${FONT_NAME}.cpp")
     
     target_link_libraries(fonts_${FONT_NAME} INTERFACE juliettef::IconFontCppHeaders)
 endfunction()
