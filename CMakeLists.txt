@@ -17,8 +17,12 @@ function(fonts_add_font FONT_NAME)
     add_library(fonts_${FONT_NAME})
     add_library(fonts::${FONT_NAME} ALIAS fonts_${FONT_NAME})
 
-    target_include_directories(fonts_${FONT_NAME} PUBLIC "include/")
-    target_sources(fonts_${FONT_NAME} PRIVATE "include/fonts/${FONT_NAME}.h" "src/${FONT_NAME}.cpp")
+    # need full paths here to work in a function
+    target_include_directories(fonts_${FONT_NAME} PUBLIC 
+        "${PROJECT_SOURCE_DIR}/include/")
+    target_sources(fonts_${FONT_NAME} PRIVATE 
+        "${PROJECT_SOURCE_DIR}/include/fonts/${FONT_NAME}.h" 
+        "${PROJECT_SOURCE_DIR}/src/${FONT_NAME}.cpp")
     
     target_link_libraries(fonts_${FONT_NAME} INTERFACE juliettef::IconFontCppHeaders)
 endfunction()
