@@ -30,7 +30,9 @@ function(fonts_add_font FONT_NAME)
     target_link_libraries(fonts_${FONT_NAME} INTERFACE juliettef::IconFontCppHeaders)
 endfunction()
 
-if(CMAKE_SOURCE_DIR STREQUAL PROJECT_SOURCE_DIR)
+# Detects whether this is a top-level project
+get_directory_property(HAS_PARENT PARENT_DIRECTORY)
+if(NOT HAS_PARENT)
     # cmake generation started here, include imgui and generate the font_binary_to_compressed_c executable
     include(imgui)
 
