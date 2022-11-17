@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.15)
 project(imgui-fonts)
 
 list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/")
+include(IconFontCppHeaders)
 
 #
 # in your code, first include this (with add_subdirectory or FetchContent_MakeAvailable)
@@ -18,8 +19,7 @@ function(fonts_add_font FONT_NAME)
 
     target_include_directories(fonts_${FONT_NAME} PUBLIC "include/")
     target_sources(fonts_${FONT_NAME} PRIVATE "include/fonts/${FONT_NAME}.h" "src/${FONT_NAME}.cpp")
-
-    include(IconFontCppHeaders)
+    
     target_link_libraries(fonts_${FONT_NAME} INTERFACE juliettef::IconFontCppHeaders)
 endfunction()
 
