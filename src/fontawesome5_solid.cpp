@@ -2,8 +2,8 @@
 
 // File: 'fa-solid-900.ttf' (202744 bytes)
 // Exported using binary_to_compressed_c.cpp
-static const unsigned int fontawesome5_compressed_size = 141009;
-static const unsigned int fontawesome5_compressed_data[141012/4] =
+const unsigned int fontawesome5_compressed_size = 141009;
+const unsigned int fontawesome5_compressed_data[141012/4] =
 {
     0x0000bc57, 0x00000000, 0xf8170300, 0x00000400, 0x00010037, 0x000d0000, 0x00030080, 0x54464650, 0x6239964d, 0x170300de, 0x281582dc, 0x4544471c,
     0x032a0046, 0x200f82f2, 0x2c0f82bc, 0x2f534f1e, 0x56873332, 0x01000060, 0x360f8258, 0x616d6360, 0xfe6af170, 0x11000034, 0x0c000068, 0x736167ce,
