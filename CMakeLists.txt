@@ -17,6 +17,10 @@ include(IconFontCppHeaders)
 set_property(GLOBAL PROPERTY __fonts_source_dir ${PROJECT_SOURCE_DIR})
 
 function(fonts_add_font FONT_NAME)
+    if(TARGET fonts_${FONT_NAME})
+        return()
+    endif()
+
     add_library(fonts_${FONT_NAME})
     add_library(fonts::${FONT_NAME} ALIAS fonts_${FONT_NAME})
 
@@ -40,4 +44,7 @@ if(NOT HAS_PARENT)
     fonts_add_font(fontawesome5)
     fonts_add_font(fontawesome6)
     fonts_add_font(source_sans_pro_regular)
+
+    # do it again to make sure we don't crash
+    fonts_add_font(fontawesome5)
 endif()
