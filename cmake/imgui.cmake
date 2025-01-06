@@ -1,7 +1,8 @@
-include(FetchContent)
-FetchContent_Declare(
+include(CPM)
+
+CPMAddPackage(
     imgui
-    GIT_REPOSITORY https://github.com/ocornut/imgui.git
+    GITHUB_REPOSITORY ocornut/imgui
     GIT_TAG 95c99aaa4be611716093edcb6b01146ab9483f30)
 FetchContent_MakeAvailable(imgui)
 
