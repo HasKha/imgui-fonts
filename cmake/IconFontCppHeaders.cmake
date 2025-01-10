@@ -7,10 +7,14 @@ include(CPM)
 CPMAddPackage(
     NAME IconFontCppHeaders
     GITHUB_REPOSITORY juliettef/IconFontCppHeaders
-    GIT_TAG 685673dea6fb4012bd2104bf9b8d8da802eade50
+    GIT_TAG 8a381189ecfe58e732466cc52e79ca887dd6a297
 )
 
-add_library(IconFontCppHeaders INTERFACE)
-add_library(juliettef::IconFontCppHeaders ALIAS IconFontCppHeaders)
+if (IconFontCppHeaders_ADDED) 
+    FILE(GLOB sources ${IconFontCppHeaders_SOURCE_DIR}/*.h)
+    add_library(IconFontCppHeaders INTERFACE)
+    target_include_directories(IconFontCppHeaders INTERFACE ${IconFontCppHeaders_SOURCE_DIR})
+    target_sources(IconFontCppHeaders PRIVATE ${sources})
 
-target_include_directories(IconFontCppHeaders INTERFACE ${iconfontcppheaders_SOURCE_DIR})
+    add_library(juliettef::IconFontCppHeaders ALIAS IconFontCppHeaders)
+endif()
